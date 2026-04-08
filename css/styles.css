@@ -1,0 +1,721 @@
+/* WonderBees Services — Elementor kit tokens (sync with js/tailwind-config.js) */
+
+@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700&display=swap");
+
+:root {
+  --ease-out: cubic-bezier(0.22, 1, 0.36, 1);
+  --color-primary: #6a5ea9;
+  --color-accent: #62acdf;
+  --nn-secondary: #191b41;
+  --nn-body: #3f3f3f;
+  --nn-link: #6a5ea9;
+  --nn-pink-soft: #62acdf;
+  --nn-pink: #5a4f94;
+  --nn-star: #6a5ea9;
+  --nn-input-border: #ddd5c8;
+}
+
+html {
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+}
+
+img,
+video {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Sticky quick-contact bar — clears home indicator on phones */
+[aria-label="Quick contact"].fixed {
+  padding-bottom: max(0.75rem, env(safe-area-inset-bottom, 0px));
+}
+
+#header-inner {
+  width: 100%;
+  min-width: 0;
+}
+
+#main {
+  min-width: 0;
+  overflow-x: hidden;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  .reveal-on-scroll,
+  .reveal-on-scroll.is-visible {
+    opacity: 1 !important;
+    transform: none !important;
+    transition: none !important;
+  }
+  .hover-grow {
+    transform: none !important;
+  }
+  .nn-hero-premium::before,
+  .nn-page-hero::before {
+    animation: none !important;
+    transform: scale(1.02);
+  }
+}
+
+body {
+  font-feature-settings: "kern" 1, "liga" 1;
+  overflow-x: hidden;
+  color: var(--nn-body);
+}
+
+/* —— Home: premium hero (full-bleed photo, diagonal cut, reference-style) —— */
+.nn-hero-premium {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+  clip-path: polygon(0 0, 100% 0, 100% calc(100% - 3rem), 0 100%);
+  font-family: "Outfit", "Roboto", system-ui, sans-serif;
+}
+
+@media (min-width: 640px) {
+  .nn-hero-premium {
+    clip-path: polygon(0 0, 100% 0, 100% calc(100% - 4.25rem), 0 100%);
+  }
+}
+
+@media (min-width: 1024px) {
+  .nn-hero-premium {
+    clip-path: polygon(0 0, 100% 0, 100% calc(100% - 5.5rem), 0 100%);
+  }
+}
+
+.nn-hero-premium::before,
+.nn-page-hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  background-color: #191b41;
+  background-image: url("https://images.unsplash.com/photo-1587654780291-39c9404d746b?auto=format&fit=crop&w=2400&q=82");
+  background-size: cover;
+  background-position: 50% 40%;
+  transform: scale(1.02);
+}
+
+.nn-hero-premium::after,
+.nn-page-hero::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  background: linear-gradient(
+    115deg,
+    rgba(25, 27, 65, 0.82) 0%,
+    rgba(25, 27, 65, 0.55) 38%,
+    rgba(25, 27, 65, 0.45) 62%,
+    rgba(25, 27, 65, 0.72) 100%
+  );
+  pointer-events: none;
+}
+
+/* Inner pages: same photo + overlay as home hero, shorter band (no diagonal clip) */
+.nn-page-hero {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  font-family: "Outfit", "Roboto", system-ui, sans-serif;
+}
+
+.nn-hero-premium__title {
+  text-shadow: 0 2px 24px rgba(0, 0, 0, 0.35), 0 1px 2px rgba(0, 0, 0, 0.2);
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .nn-hero-premium::before,
+  .nn-page-hero::before {
+    animation: nn-hero-ken 18s ease-in-out infinite alternate;
+  }
+}
+
+@keyframes nn-hero-ken {
+  from {
+    transform: scale(1.02) translate(0, 0);
+  }
+  to {
+    transform: scale(1.06) translate(-1%, 0.5%);
+  }
+}
+
+/* Home header bar — slightly softer, “template” elevation */
+.nn-header-premium {
+  border-color: rgba(221, 213, 200, 0.65);
+}
+
+/* Long article titles in page hero — sentence case, still readable on photo */
+.nn-page-hero__title-blog {
+  text-shadow: 0 2px 24px rgba(0, 0, 0, 0.35), 0 1px 2px rgba(0, 0, 0, 0.2);
+}
+
+.nn-enginehire-shell {
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.92) 0%, #fafafa 100%);
+  max-width: 100%;
+  min-width: 0;
+  /* min-w-0 + overflow hidden: avoid extra page scrollbar from wide/tall embed bleed */
+  overflow: hidden;
+}
+
+/*
+ * Engine Hire runs in an iframe; we can’t read its real content height (cross-origin).
+ * A very large height (e.g. 9000px) removes the inner scrollbar but leaves a big gap under Submit.
+ * A moderate height tightens the box; if the form is longer, users scroll inside the iframe.
+ * Adjust --enginehire-iframe-height if you see a scrollbar or still see excess blank space.
+ */
+.nn-enginehire-iframe {
+  --enginehire-iframe-height: 3600px;
+  display: block;
+  width: 100%;
+  max-width: 100%;
+  min-width: 0;
+  min-height: 22rem;
+  height: var(--enginehire-iframe-height);
+  border: 0;
+  vertical-align: top;
+}
+
+@media (max-width: 1023px) {
+  .nn-enginehire-iframe {
+    --enginehire-iframe-height: 3200px;
+  }
+}
+
+@media (max-width: 639px) {
+  .nn-enginehire-iframe {
+    --enginehire-iframe-height: 2800px;
+  }
+}
+
+.nn-alt-apply summary {
+  list-style: none;
+}
+
+.nn-alt-apply summary::-webkit-details-marker {
+  display: none;
+}
+
+/* Reference-style botanical repeat on cream page (umbels; keeps cards readable) */
+body.bg-nn-page {
+  background-image: url("../assets/patterns/floral-tile.svg");
+  background-repeat: repeat;
+  background-size: clamp(200px, 28vw, 320px) auto;
+  background-position: 50% 0;
+}
+
+/* Mobile / notched phones: keep content above sticky bar + home indicator */
+@media (max-width: 1023px) {
+  body.bg-nn-page {
+    padding-bottom: max(7rem, calc(4.5rem + env(safe-area-inset-bottom, 0px)));
+  }
+}
+
+/* Notched phones: keep header clear of status bar (horizontal stays Tailwind px-3 / sm:px-5) */
+#site-header {
+  padding-top: max(1rem, env(safe-area-inset-top, 0px));
+}
+
+#mobile-menu {
+  width: 100%;
+  box-sizing: border-box;
+}
+
+@media (max-width: 1023px) {
+  #menu-toggle {
+    min-height: 2.75rem;
+    min-width: 2.75rem;
+  }
+}
+
+#main h1,
+#main h2,
+#main h3,
+#main h4,
+#main h5,
+#main h6 {
+  overflow-wrap: break-word;
+}
+
+/* Site-wide hardening for long strings in cards/forms/content */
+#main p,
+#main li,
+#main dd,
+#main dt,
+#main label,
+#main a {
+  overflow-wrap: anywhere;
+}
+
+/* Grid/flex children can otherwise force horizontal overflow on very narrow devices */
+.reveal-on-scroll,
+[role="list"] > li {
+  min-width: 0;
+}
+
+.reveal-on-scroll {
+  opacity: 0;
+  transform: translateY(1.25rem);
+  transition: opacity 0.7s var(--ease-out), transform 0.7s var(--ease-out);
+}
+
+.reveal-on-scroll.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.skip-link {
+  position: absolute;
+  left: 1rem;
+  top: 1rem;
+  z-index: 200;
+  padding: 0.5rem 1rem;
+  border-radius: 999px;
+  background: var(--color-primary);
+  color: #ffffff;
+  font-size: 0.875rem;
+  font-weight: 600;
+  transform: translateY(-200%);
+  transition: transform 0.2s ease;
+}
+
+.skip-link:focus {
+  transform: translateY(0);
+}
+
+/* Blog article layout (static detail pages) */
+.nn-article {
+  font-size: 1.0625rem;
+  line-height: 1.75;
+  color: var(--nn-body);
+}
+
+.nn-article h2 {
+  margin-top: 2.25rem;
+  margin-bottom: 0.75rem;
+  font-family: "Roboto Slab", Georgia, serif;
+  font-size: clamp(1.15rem, 2.8vw, 1.35rem);
+  font-weight: 600;
+  color: var(--nn-secondary);
+  line-height: 1.3;
+}
+
+@media (max-width: 639px) {
+  .nn-article {
+    font-size: 1rem;
+    line-height: 1.7;
+  }
+}
+
+.nn-article h2:first-child {
+  margin-top: 0;
+}
+
+.nn-article p + p {
+  margin-top: 1.15rem;
+}
+
+.nn-article ul {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  padding-left: 1.35rem;
+  list-style-type: disc;
+}
+
+.nn-article li {
+  margin-top: 0.45rem;
+}
+
+[data-nav].is-active {
+  color: var(--nn-pink-soft);
+}
+
+.nn-navlink.is-active {
+  color: var(--nn-pink-soft);
+}
+
+/* Keep label visible if active state is ever applied to the filled header CTA */
+[data-nav].is-active.bg-nn-teal {
+  color: #fff;
+}
+
+/* Fixed header — smooth elevation on scroll (reference-style pill bar) */
+#header-inner {
+  transition:
+    box-shadow 0.35s cubic-bezier(0.4, 0, 0.2, 1),
+    background-color 0.35s cubic-bezier(0.4, 0, 0.2, 1),
+    border-color 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+#site-header.is-scrolled #header-inner {
+  box-shadow:
+    0 12px 40px rgba(25, 27, 65, 0.11),
+    0 4px 12px rgba(25, 27, 65, 0.06);
+  border-color: rgba(221, 213, 200, 0.55);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  #header-inner {
+    transition: none;
+  }
+}
+
+/* Desktop mega-menu flyouts */
+@media (min-width: 1024px) {
+  .nav-flyout-panel {
+    pointer-events: none;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(6px);
+    transition: opacity 0.2s ease, transform 0.2s ease, visibility 0.2s;
+  }
+
+  .nav-flyout-wrap:hover .nav-flyout-panel,
+  .nav-flyout-wrap:focus-within .nav-flyout-panel {
+    pointer-events: auto;
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+  }
+}
+
+/* Reference: Apply Now pill */
+.nav-apply-highlight {
+  background: rgba(106, 94, 169, 0.15);
+  margin: 0 0.5rem;
+  border-radius: 15px;
+}
+
+.nav-apply-highlight:hover {
+  border-radius: 0;
+}
+
+.star-row,
+.nn-star {
+  letter-spacing: 0.08em;
+  color: var(--nn-star);
+}
+
+.star-row .nn-star-char,
+.nn-star-char {
+  color: var(--nn-star);
+}
+
+.form-message {
+  display: none;
+}
+
+.form-message.is-visible {
+  display: block;
+}
+
+:focus-visible {
+  outline: 2px solid var(--color-primary);
+  outline-offset: 2px;
+}
+
+/* Elementor-style nav underline */
+.nn-navlink {
+  position: relative;
+  text-decoration: none;
+  color: var(--nn-secondary);
+  transition: color 0.2s ease;
+}
+
+.nn-navlink:hover,
+.nn-navlink:focus-visible {
+  color: var(--nn-secondary);
+}
+
+@media (min-width: 1024px) {
+  .nn-navlink::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -2px;
+    width: 100%;
+    height: 2px;
+    background-color: var(--nn-pink-soft);
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.25s var(--ease-out);
+  }
+
+  .nn-navlink:hover::after,
+  .nn-navlink:focus-visible::after {
+    transform: scaleX(1);
+  }
+}
+
+/* Button “grow” like Elementor */
+.hover-grow {
+  transition: transform 0.35s var(--ease-out), box-shadow 0.35s ease, background-color 0.25s ease;
+}
+
+.hover-grow:hover,
+.hover-grow:focus-visible {
+  transform: scale(1.04);
+}
+
+/* Tilted photo frame (hero + about) */
+.nn-polaroid {
+  box-sizing: border-box;
+  max-width: 100%;
+  border: 15px solid #ffffff;
+  box-shadow: 0 12px 36px rgba(25, 27, 65, 0.12);
+}
+
+@media (max-width: 1023px) {
+  .nn-polaroid {
+    border-width: 10px;
+  }
+}
+
+.nn-tilt-n {
+  transform: rotate(-9deg);
+}
+
+.nn-tilt-p {
+  transform: rotate(13deg);
+}
+
+@media (max-width: 1023px) {
+  .nn-tilt-n,
+  .nn-tilt-p {
+    transform: none;
+  }
+}
+
+/* Job openings — premium listing cards (reference-style elevation + motion) */
+.job-card-premium {
+  position: relative;
+  border: 1px solid rgba(221, 213, 200, 0.95);
+  background: linear-gradient(165deg, #ffffff 0%, #f5efe6 100%);
+  box-shadow:
+    0 22px 44px -14px rgba(25, 27, 65, 0.09),
+    0 0 0 1px rgba(255, 255, 255, 0.9) inset;
+  transition:
+    transform 0.45s var(--ease-out),
+    box-shadow 0.45s ease,
+    border-color 0.35s ease;
+}
+
+.job-card-premium:hover {
+  transform: translateY(-6px);
+  border-color: rgba(106, 94, 169, 0.35);
+  box-shadow:
+    0 34px 68px -14px rgba(25, 27, 65, 0.12),
+    0 0 0 1px rgba(106, 94, 169, 0.08) inset;
+}
+
+.job-card-premium__accent {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  height: 3px;
+  background: linear-gradient(90deg, #6a5ea9, #62acdf 50%, #99c2a2);
+  opacity: 0.95;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .job-card-premium,
+  .job-card-premium:hover {
+    transition: none;
+    transform: none;
+  }
+}
+
+/* Job grid cards (3-col reference layout — colored header + location stack) */
+.job-grid-card {
+  transition:
+    transform 0.35s var(--ease-out),
+    box-shadow 0.35s ease;
+}
+
+.job-grid-card:hover {
+  transform: translateY(-6px);
+}
+
+.job-grid-card__map {
+  background-image:
+    radial-gradient(circle at 30% 40%, rgba(255, 255, 255, 0.75) 0%, transparent 45%),
+    linear-gradient(145deg, #b8daf2 0%, #62acdf 40%, #8bc8b8 72%, #99c2a2 100%);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .job-grid-card,
+  .job-grid-card:hover {
+    transition: none;
+    transform: none;
+  }
+}
+
+/* Floating WhatsApp (reference-style blob + glow) */
+.nn-float-whatsapp {
+  position: fixed;
+  left: max(1rem, env(safe-area-inset-left));
+  bottom: max(5.25rem, calc(4.75rem + env(safe-area-inset-bottom)));
+  z-index: 45;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 3.75rem;
+  height: 3.75rem;
+  color: #fff;
+  text-decoration: none;
+  transition: transform 0.25s var(--ease-out), filter 0.25s ease;
+}
+
+.nn-float-whatsapp:hover,
+.nn-float-whatsapp:focus-visible {
+  transform: scale(1.06);
+  filter: brightness(1.05);
+}
+
+.nn-float-whatsapp:focus-visible {
+  outline: 2px solid var(--color-primary);
+  outline-offset: 3px;
+}
+
+.nn-float-whatsapp__glow {
+  position: absolute;
+  width: 4.5rem;
+  height: 4.5rem;
+  border-radius: 50% 42% 48% 52% / 45% 52% 48% 55%;
+  background: rgba(37, 211, 102, 0.38);
+  filter: blur(12px);
+  z-index: 0;
+  pointer-events: none;
+}
+
+.nn-float-whatsapp__btn {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 3.75rem;
+  height: 3.75rem;
+  border-radius: 50% 40% 50% 45% / 45% 50% 42% 52%;
+  background: linear-gradient(145deg, #25d366 0%, #128c7e 100%);
+  box-shadow:
+    0 4px 18px rgba(18, 140, 126, 0.45),
+    0 0 0 2px rgba(255, 255, 255, 0.35) inset;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .nn-float-whatsapp,
+  .nn-float-whatsapp:hover,
+  .nn-float-whatsapp:focus-visible {
+    transition: none;
+    transform: none;
+  }
+}
+
+/* reCAPTCHA v3 badge: keep above sticky contact bar (default ~14px from edge) */
+body .grecaptcha-badge {
+  bottom: 5rem !important;
+  z-index: 46 !important;
+}
+
+/* Contact / agency-style form fields (Elementor-like: calm, full-width, clear focus) */
+.nn-form-label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-size: 0.6875rem;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--nn-secondary);
+}
+
+.nn-form-label .nn-form-label__hint {
+  font-weight: 400;
+  letter-spacing: 0.02em;
+  text-transform: none;
+  font-size: 0.8125rem;
+  color: var(--nn-body);
+}
+
+.nn-form-label .nn-form-label__req {
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  font-size: 0.625rem;
+  color: var(--nn-secondary);
+  white-space: nowrap;
+}
+
+.nn-form-field {
+  display: block;
+  width: 100%;
+  min-height: 3.25rem;
+  padding: 0.8125rem 1.125rem;
+  border-radius: 15px;
+  border: 1px solid var(--nn-input-border);
+  background-color: #fff;
+  font-family: inherit;
+  font-size: 1rem;
+  line-height: 1.5;
+  color: var(--nn-secondary);
+  box-shadow: inset 0 1px 2px rgba(25, 27, 65, 0.04);
+  transition:
+    border-color 0.2s ease,
+    box-shadow 0.2s ease,
+    background-color 0.2s ease;
+}
+
+.nn-form-field::placeholder {
+  color: rgba(63, 63, 63, 0.5);
+}
+
+.nn-form-field:hover:not(:disabled):not(:focus) {
+  border-color: rgba(63, 63, 63, 0.38);
+}
+
+.nn-form-field:focus {
+  outline: none;
+  border-color: var(--color-primary);
+  background-color: #fff;
+  box-shadow:
+    inset 0 0 0 1px rgba(106, 94, 169, 0.12),
+    0 0 0 3px rgba(106, 94, 169, 0.18);
+}
+
+.nn-form-field:disabled {
+  opacity: 0.65;
+  cursor: not-allowed;
+  background-color: #f5efe6;
+}
+
+select.nn-form-field {
+  appearance: none;
+  cursor: pointer;
+  padding-right: 2.75rem;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24' stroke='%233F3F3F'%3E%3Cpath stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M19 9l-7 7-7-7'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 0.875rem center;
+  background-size: 1.125rem;
+}
+
+.nn-form-field--textarea {
+  min-height: 9rem;
+  resize: vertical;
+  padding-top: 0.875rem;
+  padding-bottom: 0.875rem;
+}
+
+.nn-form-field:-webkit-autofill,
+.nn-form-field:-webkit-autofill:hover,
+.nn-form-field:-webkit-autofill:focus {
+  -webkit-text-fill-color: var(--nn-secondary);
+  box-shadow: 0 0 0 1000px #fff inset;
+  transition: background-color 99999s ease-out;
+}

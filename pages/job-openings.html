@@ -1,0 +1,474 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+    <meta name="description" content="Explore nanny and household openings represented by WonderBees Services." />
+    <title>Job Openings | WonderBees Services</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@300;400;500;600;700&family=Roboto:ital,wght@0,300;0,400;0,500;0,700;1,400&display=swap" rel="stylesheet" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="../js/tailwind-config.js"></script>
+    <link rel="stylesheet" href="../css/styles.css" />
+  </head>
+  <body class="bg-nn-page pb-28 font-sans text-nn-body antialiased lg:pb-24" data-page="job-openings">
+    <a class="skip-link" href="#main">Skip to content</a>
+
+    <header class="fixed left-0 right-0 top-0 z-50 px-3 pt-4 sm:px-5" id="site-header">
+  <div id="header-inner" class="nn-header-premium mx-auto flex max-w-nn items-center justify-between gap-3 rounded-nn-xl border border-nn-wash/70 bg-white/95 px-4 py-3 shadow-[0_8px_40px_-12px_rgba(25,27,65,0.12)] backdrop-blur-md sm:px-6 lg:gap-5">
+    <a href="../index.html#hero" class="flex min-w-0 shrink-0 items-center gap-3 focus:outline-none focus-visible:ring-2 focus-visible:ring-nn-pink-soft focus-visible:ring-offset-2" aria-label="WonderBeesService home">
+      <img src="../assets/images/logo.png" width="56" height="56" alt="WonderBeesService" class="h-12 w-12 shrink-0 object-contain sm:h-14 sm:w-14" loading="eager" />
+      <span class="hidden min-w-0 whitespace-nowrap font-display text-base font-semibold leading-tight tracking-tight text-nn-secondary sm:inline sm:text-lg md:text-xl lg:text-2xl">WonderBeesService</span>
+    </a>
+        <nav class="hidden flex-1 items-center justify-end gap-x-0.5 lg:flex lg:flex-wrap" aria-label="Primary">
+      <a href="../index.html#hero" data-nav="home" class="nn-navlink px-3 py-2 text-[0.9375rem] font-medium tracking-tight text-nn-secondary">Home</a>
+      <div class="nav-flyout-wrap relative">
+        <button type="button" class="nn-navlink flex items-center gap-1 px-3 py-2 text-[0.9375rem] font-medium tracking-tight text-nn-secondary" aria-expanded="false" aria-haspopup="true">
+          Services
+          <svg class="h-3 w-3 opacity-70" fill="currentColor" viewBox="0 0 320 512" aria-hidden="true"><path d="M31.3 192h257.3c17.8 0 26.7 21.5 14.1 34.1L174.1 354.8c-7.8 7.8-20.5 7.8-28.3 0L17.2 226.1C4.6 213.5 13.5 192 31.3 192z"/></svg>
+        </button>
+        <div class="nav-flyout-panel absolute right-0 top-full z-50 w-56 pt-3 xl:left-0 xl:right-auto" role="menu">
+          <div class="rounded-nn-lg bg-nn-blush py-2 shadow-nn-card ring-1 ring-nn-wash/50">
+            <a href="our-nannies.html" data-nav="our-nannies" class="block px-4 py-2.5 text-sm text-nn-secondary hover:bg-primary/10" role="menuitem">Nanny Placement</a>
+            <a href="pricing.html" data-nav="pricing" class="block px-4 py-2.5 text-sm text-nn-secondary hover:bg-primary/10" role="menuitem">On Call/Hotel</a>
+            <a href="household-managers.html" data-nav="household-managers" class="block px-4 py-2.5 text-sm text-nn-secondary hover:bg-primary/10" role="menuitem">Newborn Care Specialist NCS</a>
+          </div>
+        </div>
+      </div>
+      <a href="about.html" data-nav="about" class="nn-navlink px-3 py-2 text-[0.9375rem] font-medium tracking-tight text-nn-secondary">About</a>
+      <a href="../contact.html" data-nav="contact" class="nn-navlink px-3 py-2 text-[0.9375rem] font-medium tracking-tight text-nn-secondary">Contact</a>
+      <a
+        href="job-openings.html"
+        data-nav="job-openings"
+        class="ml-1 inline-flex items-center justify-center rounded-nn border-2 border-nn-teal bg-transparent px-4 py-2 text-sm font-semibold text-nn-teal transition hover:bg-nn-teal/[0.08] focus:outline-none focus-visible:ring-2 focus-visible:ring-nn-teal focus-visible:ring-offset-2"
+        >Join the Team</a
+      >
+      <a
+        href="apply-family.html"
+        data-nav="apply-family"
+        class="ml-2 inline-flex items-center justify-center rounded-nn bg-nn-teal px-4 py-2 text-sm font-semibold text-white shadow-md shadow-nn-teal/30 transition hover:bg-secondary hover:brightness-[0.97] focus:outline-none focus-visible:ring-2 focus-visible:ring-nn-teal focus-visible:ring-offset-2"
+        >Find a Specialist</a
+      >
+    </nav>
+    <button type="button" class="inline-flex items-center justify-center rounded-md p-2 text-nn-secondary lg:hidden" aria-expanded="false" aria-controls="mobile-menu" id="menu-toggle">
+      <span class="sr-only">Open menu</span>
+      <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" /></svg>
+    </button>
+  </div>
+    <div id="mobile-menu" class="mx-auto mt-2 hidden max-h-[85vh] max-w-nn overflow-y-auto rounded-nn-xl border border-nn-wash bg-nn-surface px-2 py-3 shadow-nn-card lg:hidden" role="dialog" aria-modal="true" aria-label="Mobile navigation">
+    <div class="space-y-1">
+      <a href="../index.html#hero" data-nav="home" class="block rounded-lg px-3 py-2 text-sm font-medium text-nn-secondary hover:bg-nn-page">Home</a>
+      <div class="border-b border-nn-wash/80 pb-2">
+        <button type="button" class="flex w-full items-center justify-between rounded-lg px-3 py-2 text-left text-sm font-medium text-nn-secondary hover:bg-nn-page" data-accordion-trigger aria-expanded="false" aria-controls="acc-families">
+          Services <span class="text-nn-pink-soft" aria-hidden="true">+</span>
+        </button>
+        <div id="acc-families" class="hidden space-y-0.5 pl-2 pt-1">
+          <a href="our-nannies.html" data-nav="our-nannies" class="block rounded-lg px-3 py-2 text-sm text-nn-body hover:bg-nn-page">Nanny Placement</a>
+          <a href="pricing.html" data-nav="pricing" class="block rounded-lg px-3 py-2 text-sm text-nn-body hover:bg-nn-page">On Call/Hotel</a>
+          <a href="household-managers.html" data-nav="household-managers" class="block rounded-lg px-3 py-2 text-sm text-nn-body hover:bg-nn-page">Newborn Care Specialist NCS</a>
+        </div>
+      </div>
+      <a href="about.html" data-nav="about" class="block rounded-lg px-3 py-2 text-sm font-medium text-nn-secondary hover:bg-nn-page">About</a>
+      <a href="../contact.html" data-nav="contact" class="block rounded-lg px-3 py-2 text-sm font-medium text-nn-secondary hover:bg-nn-page">Contact</a>
+      <a
+            href="job-openings.html"
+            data-nav="job-openings"
+            class="block rounded-lg border-2 border-nn-teal px-3 py-2.5 text-center text-sm font-semibold text-nn-teal hover:bg-nn-teal/[0.06]"
+            >Join the Team</a
+          >
+      <a
+            href="apply-family.html"
+            data-nav="apply-family"
+            class="block rounded-lg bg-nn-teal px-3 py-2.5 text-center text-sm font-semibold text-white shadow-sm hover:brightness-95"
+            >Find a Specialist</a
+          >
+    </div>
+  </div>
+</header>
+
+    <main id="main" class="pt-24 sm:pt-28">
+      <div class="nn-page-hero relative scroll-mt-24 sm:scroll-mt-28" aria-labelledby="page-hero-heading">
+        <div class="relative z-[1] mx-auto max-w-nn px-4 py-12 sm:px-6 sm:pb-14 sm:pt-16 lg:py-16">
+          <h1 id="page-hero-heading" class="nn-page-hero__title-blog max-w-4xl text-3xl font-semibold leading-tight tracking-[-0.02em] text-white sm:text-4xl lg:text-[2.5rem] lg:leading-tight">
+            Join our team of nannies, on-call sitters, and newborn care specialists
+          </h1>
+          <h2 class="mt-5 max-w-3xl font-sans text-lg font-normal leading-relaxed text-white/88 sm:text-xl">
+            See a role that fits? Move quickly—share your profile so we can introduce you while the family is still interviewing.
+          </h2>
+          <p class="mt-6 max-w-3xl text-sm leading-relaxed text-white/75 sm:text-base">
+            Salaries shown are typical hourly ranges we see for each posting (USD). Final offers depend on experience, schedule, and benefits.
+          </p>
+          <p class="mt-4">
+            <a href="#express-interest" class="text-sm font-semibold text-nn-teal-light underline decoration-white/30 underline-offset-4 hover:text-white hover:decoration-white/60">Express interest in a position →</a>
+          </p>
+        </div>
+      </div>
+      <div class="mx-auto max-w-nn px-4 pb-16 pt-10 sm:px-6 sm:pb-20 sm:pt-12 lg:pb-24">
+        <!-- 3-column grid cards (modern premium layout — colored header, teal rate, location stack) -->
+        <div class="reveal-on-scroll grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3" aria-label="Featured openings">
+          <!-- Card 1 — navy header -->
+          <article id="job-wb-501" class="job-grid-card flex h-full flex-col overflow-hidden rounded-3xl bg-nn-surface shadow-[0_20px_44px_-14px_rgba(0,8,33,0.18)] ring-1 ring-black/[0.06]">
+            <div class="relative min-h-[170px] bg-[#000821] px-4 pb-10 pt-5">
+              <span class="absolute left-4 top-4 z-20 rounded-full bg-[#4fd1c5] px-3 py-1 text-sm font-bold text-white shadow-md" aria-label="Compensation range">$28–$34</span>
+              <span class="absolute right-3 top-4 z-20 text-[10px] font-bold uppercase tracking-[0.2em] text-white/45">WB-501</span>
+              <div class="absolute bottom-0 left-1/2 z-10 flex w-[92%] max-w-[220px] -translate-x-1/2 translate-y-1/2 flex-col items-center">
+                <div class="relative z-20 -mb-5 flex h-14 w-14 items-center justify-center rounded-full border-[3px] border-white shadow-lg job-grid-card__map" aria-hidden="true">
+                  <svg class="h-7 w-7 text-white drop-shadow-md" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5A2.5 2.5 0 1 1 12 6a2.5 2.5 0 0 1 0 5.5z"/></svg>
+                </div>
+                <div class="relative z-10 w-full rounded-2xl bg-nn-surface px-4 py-3 pt-8 text-center shadow-lg ring-1 ring-nn-wash/50">
+                  <p class="text-sm font-bold leading-snug text-nn-secondary">Charlotte, NC (28204)</p>
+                </div>
+              </div>
+            </div>
+            <div class="flex flex-1 flex-col bg-nn-surface px-6 pb-2 pt-14">
+              <h3 class="font-sans text-[1.05rem] font-semibold leading-snug tracking-tight text-nn-secondary sm:text-lg">
+                <a href="apply-nanny.html#job-wb-501" class="text-inherit hover:text-[#a3b11a] focus:outline-none focus-visible:ring-2 focus-visible:ring-[#4fd1c5] focus-visible:ring-offset-2"
+                  >Full-time infant nanny for relaxed, organized family — Charlotte, NC (28204)</a>
+              </h3>
+              <p class="mt-4 flex-1 text-sm leading-relaxed text-nn-body sm:text-[15px]">
+                A warm household is seeking a full-time caregiver for infant twins with a mid-April start. They value calm routines, clear communication, and a partner who anticipates needs without hovering.
+              </p>
+              <a href="apply-nanny.html#job-wb-501" class="mt-5 inline-flex text-xs font-bold uppercase tracking-[0.12em] text-[#a3b11a] transition hover:opacity-80">Read more&nbsp;»</a>
+            </div>
+            <footer class="mt-auto border-t border-nn-wash/50 px-6 py-4 text-xs text-nn-body">
+              <time datetime="2026-02-18">18 February, 2026</time>
+              <span class="mx-2 text-nn-wash" aria-hidden="true">·</span>
+              <span>No comments</span>
+            </footer>
+          </article>
+
+          <!-- Card 2 — pink gradient -->
+          <article id="job-wb-498" class="job-grid-card flex h-full flex-col overflow-hidden rounded-3xl bg-nn-surface shadow-[0_20px_44px_-14px_rgba(0,8,33,0.18)] ring-1 ring-black/[0.06]">
+            <div class="relative min-h-[170px] bg-gradient-to-b from-[#ff5ebf] to-[#d10074] px-4 pb-10 pt-5">
+              <span class="absolute left-4 top-4 z-20 rounded-full bg-[#4fd1c5] px-3 py-1 text-sm font-bold text-white shadow-md" aria-label="Compensation range">$26–$33</span>
+              <span class="absolute right-3 top-4 z-20 text-[10px] font-bold uppercase tracking-[0.2em] text-white/50">WB-498</span>
+              <div class="absolute bottom-0 left-1/2 z-10 flex w-[92%] max-w-[220px] -translate-x-1/2 translate-y-1/2 flex-col items-center">
+                <div class="relative z-20 -mb-5 flex h-14 w-14 items-center justify-center rounded-full border-[3px] border-white shadow-lg job-grid-card__map" aria-hidden="true">
+                  <svg class="h-7 w-7 text-white drop-shadow-md" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5A2.5 2.5 0 1 1 12 6a2.5 2.5 0 0 1 0 5.5z"/></svg>
+                </div>
+                <div class="relative z-10 w-full rounded-2xl bg-nn-surface px-4 py-3 pt-8 text-center shadow-lg ring-1 ring-nn-wash/50">
+                  <p class="text-sm font-bold leading-snug text-lime-600">Durham, NC</p>
+                </div>
+              </div>
+            </div>
+            <div class="flex flex-1 flex-col bg-nn-surface px-6 pb-2 pt-14">
+              <h3 class="font-sans text-[1.05rem] font-semibold leading-snug tracking-tight text-nn-secondary sm:text-lg">
+                <a href="apply-nanny.html#job-wb-498" class="text-inherit hover:text-[#a3b11a] focus:outline-none focus-visible:ring-2 focus-visible:ring-[#4fd1c5] focus-visible:ring-offset-2"
+                  >Infant specialist with collaborative first-time parents — Durham, NC</a>
+              </h3>
+              <p class="mt-4 flex-1 text-sm leading-relaxed text-nn-body sm:text-[15px]">
+                <strong class="font-semibold text-nn-secondary">Start date:</strong> flexible / February 2026. Parents want someone confident with routines, feeding, and respectful care—with emotional intelligence and punctuality.
+              </p>
+              <a href="apply-nanny.html#job-wb-498" class="mt-5 inline-flex text-xs font-bold uppercase tracking-[0.12em] text-[#a3b11a] transition hover:opacity-80">Read more&nbsp;»</a>
+            </div>
+            <footer class="mt-auto border-t border-nn-wash/50 px-6 py-4 text-xs text-nn-body">
+              <time datetime="2026-02-04">4 February, 2026</time>
+              <span class="mx-2 text-nn-wash" aria-hidden="true">·</span>
+              <span>No comments</span>
+            </footer>
+          </article>
+
+          <!-- Card 3 — orange gradient -->
+          <article id="job-wb-472" class="job-grid-card flex h-full flex-col overflow-hidden rounded-3xl bg-nn-surface shadow-[0_20px_44px_-14px_rgba(0,8,33,0.18)] ring-1 ring-black/[0.06]">
+            <div class="relative min-h-[170px] bg-gradient-to-b from-[#ff9124] to-[#e65c00] px-4 pb-10 pt-5">
+              <span class="absolute left-4 top-4 z-20 rounded-full bg-[#4fd1c5] px-3 py-1 text-sm font-bold text-white shadow-md" aria-label="Compensation range">$26–$31</span>
+              <span class="absolute right-3 top-4 z-20 text-[10px] font-bold uppercase tracking-[0.2em] text-white/50">WB-472</span>
+              <div class="absolute bottom-0 left-1/2 z-10 flex w-[92%] max-w-[220px] -translate-x-1/2 translate-y-1/2 flex-col items-center">
+                <div class="relative z-20 -mb-5 flex h-14 w-14 items-center justify-center rounded-full border-[3px] border-white shadow-lg job-grid-card__map" aria-hidden="true">
+                  <svg class="h-7 w-7 text-white drop-shadow-md" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5A2.5 2.5 0 1 1 12 6a2.5 2.5 0 0 1 0 5.5z"/></svg>
+                </div>
+                <div class="relative z-10 w-full rounded-2xl bg-nn-surface px-4 py-3 pt-8 text-center shadow-lg ring-1 ring-nn-wash/50">
+                  <p class="text-sm font-bold leading-snug text-orange-600">Hillsborough, NC</p>
+                </div>
+              </div>
+            </div>
+            <div class="flex flex-1 flex-col bg-nn-surface px-6 pb-2 pt-14">
+              <h3 class="font-sans text-[1.05rem] font-semibold leading-snug tracking-tight text-nn-secondary sm:text-lg">
+                <a href="apply-nanny.html#job-wb-472" class="text-inherit hover:text-[#a3b11a] focus:outline-none focus-visible:ring-2 focus-visible:ring-[#4fd1c5] focus-visible:ring-offset-2"
+                  >Loving full-time nanny / household coordinator — Hillsborough, NC</a>
+              </h3>
+              <p class="mt-4 flex-1 text-sm leading-relaxed text-nn-body sm:text-[15px]">
+                A family of five wants a steady teammate who blends childcare with calm household rhythm—light meal planning, tidying common areas, and keeping the school-week structured.
+              </p>
+              <a href="apply-nanny.html#job-wb-472" class="mt-5 inline-flex text-xs font-bold uppercase tracking-[0.12em] text-[#a3b11a] transition hover:opacity-80">Read more&nbsp;»</a>
+            </div>
+            <footer class="mt-auto border-t border-nn-wash/50 px-6 py-4 text-xs text-nn-body">
+              <time datetime="2025-11-17">17 November, 2025</time>
+              <span class="mx-2 text-nn-wash" aria-hidden="true">·</span>
+              <span>No comments</span>
+            </footer>
+          </article>
+
+          <!-- Card 4 — navy -->
+          <article id="job-wb-471" class="job-grid-card flex h-full flex-col overflow-hidden rounded-3xl bg-nn-surface shadow-[0_20px_44px_-14px_rgba(0,8,33,0.18)] ring-1 ring-black/[0.06]">
+            <div class="relative min-h-[170px] bg-[#000821] px-4 pb-10 pt-5">
+              <span class="absolute left-4 top-4 z-20 rounded-full bg-[#4fd1c5] px-3 py-1 text-sm font-bold text-white shadow-md" aria-label="Compensation range">$27–$32</span>
+              <span class="absolute right-3 top-4 z-20 text-[10px] font-bold uppercase tracking-[0.2em] text-white/45">WB-471</span>
+              <div class="absolute bottom-0 left-1/2 z-10 flex w-[92%] max-w-[220px] -translate-x-1/2 translate-y-1/2 flex-col items-center">
+                <div class="relative z-20 -mb-5 flex h-14 w-14 items-center justify-center rounded-full border-[3px] border-white shadow-lg job-grid-card__map" aria-hidden="true">
+                  <svg class="h-7 w-7 text-white drop-shadow-md" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5A2.5 2.5 0 1 1 12 6a2.5 2.5 0 0 1 0 5.5z"/></svg>
+                </div>
+                <div class="relative z-10 w-full rounded-2xl bg-nn-surface px-4 py-3 pt-8 text-center shadow-lg ring-1 ring-nn-wash/50">
+                  <p class="text-sm font-bold leading-snug text-nn-secondary">Durham, NC (27705)</p>
+                </div>
+              </div>
+            </div>
+            <div class="flex flex-1 flex-col bg-nn-surface px-6 pb-2 pt-14">
+              <h3 class="font-sans text-[1.05rem] font-semibold leading-snug tracking-tight text-nn-secondary sm:text-lg">
+                <a href="apply-nanny.html#job-wb-471" class="text-inherit hover:text-[#a3b11a] focus:outline-none focus-visible:ring-2 focus-visible:ring-[#4fd1c5] focus-visible:ring-offset-2"
+                  >Nanny &amp; household assistant — Durham, NC (27705)</a>
+              </h3>
+              <p class="mt-4 flex-1 text-sm leading-relaxed text-nn-body sm:text-[15px]">
+                Energetic household with three children seeks a long-term professional who can drive activities, manage schedules, and partner on light projects at home.
+              </p>
+              <a href="apply-nanny.html#job-wb-471" class="mt-5 inline-flex text-xs font-bold uppercase tracking-[0.12em] text-[#a3b11a] transition hover:opacity-80">Read more&nbsp;»</a>
+            </div>
+            <footer class="mt-auto border-t border-nn-wash/50 px-6 py-4 text-xs text-nn-body">
+              <time datetime="2025-11-04">4 November, 2025</time>
+              <span class="mx-2 text-nn-wash" aria-hidden="true">·</span>
+              <span>No comments</span>
+            </footer>
+          </article>
+
+          <!-- Card 5 — pink -->
+          <article id="job-wb-468" class="job-grid-card flex h-full flex-col overflow-hidden rounded-3xl bg-nn-surface shadow-[0_20px_44px_-14px_rgba(0,8,33,0.18)] ring-1 ring-black/[0.06]">
+            <div class="relative min-h-[170px] bg-gradient-to-b from-[#ff5ebf] to-[#d10074] px-4 pb-10 pt-5">
+              <span class="absolute left-4 top-4 z-20 rounded-full bg-[#4fd1c5] px-3 py-1 text-sm font-bold text-white shadow-md" aria-label="Compensation range">$28–$38</span>
+              <span class="absolute right-3 top-4 z-20 text-[10px] font-bold uppercase tracking-[0.2em] text-white/50">WB-468</span>
+              <div class="absolute bottom-0 left-1/2 z-10 flex w-[92%] max-w-[220px] -translate-x-1/2 translate-y-1/2 flex-col items-center">
+                <div class="relative z-20 -mb-5 flex h-14 w-14 items-center justify-center rounded-full border-[3px] border-white shadow-lg job-grid-card__map" aria-hidden="true">
+                  <svg class="h-7 w-7 text-white drop-shadow-md" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5A2.5 2.5 0 1 1 12 6a2.5 2.5 0 0 1 0 5.5z"/></svg>
+                </div>
+                <div class="relative z-10 w-full rounded-2xl bg-nn-surface px-4 py-3 pt-8 text-center shadow-lg ring-1 ring-nn-wash/50">
+                  <p class="text-sm font-bold leading-snug text-lime-600">Chapel Hill, NC</p>
+                </div>
+              </div>
+            </div>
+            <div class="flex flex-1 flex-col bg-nn-surface px-6 pb-2 pt-14">
+              <h3 class="font-sans text-[1.05rem] font-semibold leading-snug tracking-tight text-nn-secondary sm:text-lg">
+                <a href="apply-nanny.html#job-wb-468" class="text-inherit hover:text-[#a3b11a] focus:outline-none focus-visible:ring-2 focus-visible:ring-[#4fd1c5] focus-visible:ring-offset-2"
+                  >Proactive full-time nanny &amp; house manager — Chapel Hill, NC</a>
+              </h3>
+              <p class="mt-4 flex-1 text-sm leading-relaxed text-nn-body sm:text-[15px]">
+                Casual, welcoming home with two young children needs someone who can run the weekday playbook—school prep, activities, vendor coordination, and seasonal projects.
+              </p>
+              <a href="apply-nanny.html#job-wb-468" class="mt-5 inline-flex text-xs font-bold uppercase tracking-[0.12em] text-[#a3b11a] transition hover:opacity-80">Read more&nbsp;»</a>
+            </div>
+            <footer class="mt-auto border-t border-nn-wash/50 px-6 py-4 text-xs text-nn-body">
+              <time datetime="2025-10-03">3 October, 2025</time>
+              <span class="mx-2 text-nn-wash" aria-hidden="true">·</span>
+              <span>No comments</span>
+            </footer>
+          </article>
+
+          <!-- Card 6 — orange -->
+          <article id="job-wb-462" class="job-grid-card flex h-full flex-col overflow-hidden rounded-3xl bg-nn-surface shadow-[0_20px_44px_-14px_rgba(0,8,33,0.18)] ring-1 ring-black/[0.06]">
+            <div class="relative min-h-[170px] bg-gradient-to-b from-[#ff9124] to-[#e65c00] px-4 pb-10 pt-5">
+              <span class="absolute left-4 top-4 z-20 rounded-full bg-[#4fd1c5] px-3 py-1 text-sm font-bold text-white shadow-md" aria-label="Compensation range">$27–$35</span>
+              <span class="absolute right-3 top-4 z-20 text-[10px] font-bold uppercase tracking-[0.2em] text-white/50">WB-462</span>
+              <div class="absolute bottom-0 left-1/2 z-10 flex w-[92%] max-w-[220px] -translate-x-1/2 translate-y-1/2 flex-col items-center">
+                <div class="relative z-20 -mb-5 flex h-14 w-14 items-center justify-center rounded-full border-[3px] border-white shadow-lg job-grid-card__map" aria-hidden="true">
+                  <svg class="h-7 w-7 text-white drop-shadow-md" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5A2.5 2.5 0 1 1 12 6a2.5 2.5 0 0 1 0 5.5z"/></svg>
+                </div>
+                <div class="relative z-10 w-full rounded-2xl bg-nn-surface px-4 py-3 pt-8 text-center shadow-lg ring-1 ring-nn-wash/50">
+                  <p class="text-sm font-bold leading-snug text-orange-600">Apex, NC</p>
+                </div>
+              </div>
+            </div>
+            <div class="flex flex-1 flex-col bg-nn-surface px-6 pb-2 pt-14">
+              <h3 class="font-sans text-[1.05rem] font-semibold leading-snug tracking-tight text-nn-secondary sm:text-lg">
+                <a href="apply-nanny.html#job-wb-462" class="text-inherit hover:text-[#a3b11a] focus:outline-none focus-visible:ring-2 focus-visible:ring-[#4fd1c5] focus-visible:ring-offset-2"
+                  >Long-term full-time nanny for three children — Apex, NC</a>
+              </h3>
+              <p class="mt-4 flex-1 text-sm leading-relaxed text-nn-body sm:text-[15px]">
+                Spacious home in a quiet neighborhood; family loves outdoor play, creative projects, and reading together—with room to grow through school years and travel summers.
+              </p>
+              <a href="apply-nanny.html#job-wb-462" class="mt-5 inline-flex text-xs font-bold uppercase tracking-[0.12em] text-[#a3b11a] transition hover:opacity-80">Read more&nbsp;»</a>
+            </div>
+            <footer class="mt-auto border-t border-nn-wash/50 px-6 py-4 text-xs text-nn-body">
+              <time datetime="2025-08-17">17 August, 2025</time>
+              <span class="mx-2 text-nn-wash" aria-hidden="true">·</span>
+              <span>No comments</span>
+            </footer>
+          </article>
+        </div>
+
+        <!-- Personal information / express interest (reference-style job board application) -->
+        <div id="express-interest" class="reveal-on-scroll mt-16 scroll-mt-28 sm:scroll-mt-32">
+          <div class="rounded-nn-2xl bg-nn-surface p-8 shadow-nn ring-1 ring-black/[0.06] sm:p-10 lg:p-12">
+            <p class="text-xs font-semibold uppercase tracking-[0.2em] text-nn-link">Apply now</p>
+            <h2 class="mt-3 font-sans text-2xl font-medium text-nn-secondary sm:text-3xl">Spotted the right role? Tell us about yourself</h2>
+            <p class="mt-4 max-w-2xl text-nn-body">
+              Submit your personal details and the posting you have in mind. Our nannies team will follow up with screening steps—usually within a few business days.
+            </p>
+
+            <form id="job-interest-form" class="mx-auto mt-8 max-w-3xl" action="https://formspree.io/f/YOUR_FORM_ID" method="POST" novalidate>
+              <input type="hidden" name="_subject" value="WonderBees Services — Job board candidate inquiry" />
+              <input type="hidden" name="form_source" value="job_openings" />
+              <div class="hidden" aria-hidden="true">
+                <label for="job-form-company">Company</label>
+                <input type="text" id="job-form-company" name="_gotcha" tabindex="-1" autocomplete="off" />
+              </div>
+
+              <div class="grid gap-5 sm:grid-cols-2 sm:gap-6">
+                <div class="sm:col-span-2">
+                  <label for="job-legal-name" class="nn-form-label">Legal full name</label>
+                  <input type="text" id="job-legal-name" name="legal_full_name" required autocomplete="name" class="nn-form-field" />
+                </div>
+                <div>
+                  <label for="job-email" class="nn-form-label">Email</label>
+                  <input type="email" id="job-email" name="email" required autocomplete="email" class="nn-form-field" />
+                </div>
+                <div>
+                  <label for="job-phone" class="nn-form-label">Mobile phone</label>
+                  <input type="tel" id="job-phone" name="phone" required autocomplete="tel" class="nn-form-field" />
+                </div>
+                <div>
+                  <label for="job-city" class="nn-form-label">City</label>
+                  <input type="text" id="job-city" name="city" required autocomplete="address-level2" class="nn-form-field" />
+                </div>
+                <div>
+                  <label for="job-state" class="nn-form-label">State / region</label>
+                  <input type="text" id="job-state" name="state_region" required autocomplete="address-level1" class="nn-form-field" placeholder="e.g. NC, NY" />
+                </div>
+                <div>
+                  <label for="job-zip" class="nn-form-label">ZIP / postal code</label>
+                  <input type="text" id="job-zip" name="postal_code" required autocomplete="postal-code" class="nn-form-field" />
+                </div>
+                <div>
+                  <label for="job-posting" class="nn-form-label">Position you are interested in</label>
+                  <select id="job-posting" name="position_code" class="nn-form-field">
+                    <option value="">Select a posting (optional)</option>
+                    <option value="WB-501">WB-501 — Charlotte, NC — Infant nanny</option>
+                    <option value="WB-498">WB-498 — Durham, NC — Infant specialist</option>
+                    <option value="WB-472">WB-472 — Hillsborough, NC — Nanny / household</option>
+                    <option value="WB-471">WB-471 — Durham, NC — Nanny &amp; assistant</option>
+                    <option value="WB-468">WB-468 — Chapel Hill, NC — Nanny &amp; house manager</option>
+                    <option value="WB-462">WB-462 — Apex, NC — Three children</option>
+                    <option value="general">Any suitable role in my area</option>
+                  </select>
+                </div>
+                <div>
+                  <label for="job-years" class="nn-form-label">Years of professional childcare experience</label>
+                  <select id="job-years" name="years_experience" required class="nn-form-field">
+                    <option value="">Select…</option>
+                    <option value="0-2">0–2 years</option>
+                    <option value="3-5">3–5 years</option>
+                    <option value="6-10">6–10 years</option>
+                    <option value="11+">11+ years</option>
+                  </select>
+                </div>
+                <div>
+                  <label for="job-start" class="nn-form-label">Earliest available start</label>
+                  <input type="text" id="job-start" name="available_start" required class="nn-form-field" placeholder="e.g. March 2026 or 2 weeks notice" />
+                </div>
+                <div>
+                  <label for="job-work-auth" class="nn-form-label">Authorized to work in the U.S.?</label>
+                  <select id="job-work-auth" name="authorized_us_work" required class="nn-form-field">
+                    <option value="">Select…</option>
+                    <option value="yes">Yes</option>
+                    <option value="no">No</option>
+                  </select>
+                </div>
+                <div>
+                  <label for="job-license" class="nn-form-label">Valid driver's license &amp; safe driving record?</label>
+                  <select id="job-license" name="drivers_license" required class="nn-form-field">
+                    <option value="">Select…</option>
+                    <option value="yes">Yes</option>
+                    <option value="no">No</option>
+                    <option value="na">Not required for my search</option>
+                  </select>
+                </div>
+                <div>
+                  <label for="job-cpr" class="nn-form-label">CPR / first aid current (or willing to renew)?</label>
+                  <select id="job-cpr" name="cpr_first_aid" required class="nn-form-field">
+                    <option value="">Select…</option>
+                    <option value="current">Current certification</option>
+                    <option value="renew">Expired — willing to renew before start</option>
+                    <option value="none">Not yet — willing to complete</option>
+                  </select>
+                </div>
+                <div class="sm:col-span-2">
+                  <label for="job-profile-url" class="nn-form-label">Résumé or LinkedIn URL <span class="nn-form-label__hint">(optional)</span></label>
+                  <input type="url" id="job-profile-url" name="profile_url" autocomplete="url" class="nn-form-field" placeholder="https://…" />
+                </div>
+                <div class="sm:col-span-2">
+                  <label for="job-message" class="nn-form-label">Anything else we should know?</label>
+                  <textarea id="job-message" name="message" rows="4" class="nn-form-field nn-form-field--textarea" placeholder="Ideal roles, salary expectations, relocation, languages, special needs experience…"></textarea>
+                </div>
+              </div>
+
+              <p id="job-form-loading" class="mt-6 hidden text-sm font-medium text-nn-body" role="status" aria-live="polite">Sending…</p>
+              <p id="job-form-success" class="mt-6 hidden rounded-nn-lg border border-primary/20 bg-base px-4 py-3 text-sm font-medium text-nn-secondary" role="status">
+                Thank you—we received your information and will be in touch shortly.
+              </p>
+              <p id="job-form-error" class="mt-6 hidden rounded-nn-lg border border-red-200 bg-red-50 px-4 py-3 text-sm font-medium text-red-800" role="alert"></p>
+
+              <button
+                type="submit"
+                id="job-interest-submit"
+                class="mt-6 min-h-[3.25rem] w-full rounded-nn-lg bg-nn-cta px-8 text-sm font-semibold uppercase tracking-[0.12em] text-white shadow-[0_4px_14px_rgba(150,106,82,0.35)] transition hover:opacity-95 disabled:cursor-not-allowed disabled:opacity-60 sm:w-auto sm:min-w-[220px]"
+              >
+                Submit application
+              </button>
+              <p class="mt-4 text-center text-[11px] leading-relaxed text-nn-body/90 sm:text-left">
+                This site is protected by reCAPTCHA and the Google
+                <a href="https://policies.google.com/privacy" class="text-nn-link underline hover:no-underline" target="_blank" rel="noopener noreferrer">Privacy Policy</a> and
+                <a href="https://policies.google.com/terms" class="text-nn-link underline hover:no-underline" target="_blank" rel="noopener noreferrer">Terms of Service</a> apply.
+              </p>
+            </form>
+          </div>
+        </div>
+
+        <div class="reveal-on-scroll mt-14 flex flex-wrap justify-center gap-4 border-t border-nn-wash pt-10 sm:justify-start">
+          <a href="apply-nanny.html" class="inline-flex rounded-full bg-nn-cta px-8 py-3 text-sm font-semibold uppercase tracking-wide text-white transition hover:opacity-95">Apply now</a>
+          <a href="../contact.html" class="inline-flex rounded-full border border-nn-wash bg-nn-surface px-8 py-3 text-sm font-semibold uppercase tracking-wide text-nn-secondary transition hover:bg-nn-page">Contact us</a>
+        </div>
+      </div>
+    </main>
+
+
+    <footer class="border-t border-nn-wash bg-nn-page pb-8 pt-14" id="site-footer">
+  <div class="mx-auto max-w-nn px-4 sm:px-6 lg:px-8">
+    <p class="text-center font-sans text-lg font-medium text-nn-secondary sm:text-xl">WonderBees Services</p>
+    <p class="mx-auto mt-4 max-w-4xl text-center text-xs leading-relaxed text-nn-body sm:text-sm">Quality childcare solutions tailored to your family's needs</p>
+    <p class="mx-auto mt-3 max-w-4xl text-center text-xs leading-relaxed text-nn-body sm:text-sm">
+      Nanny Placement · On Call / Hotel Babysitters · Newborn Care Specialist NCS · Personal Assistant Services</p>
+    <div class="mt-10 flex flex-wrap items-center justify-center gap-6 text-sm text-nn-body">
+      <a href="tel:+917025882913" class="font-medium text-nn-secondary hover:text-nn-pink-soft">Call +91 702 588 2913</a>
+      <a href="https://wa.me/917025882913" class="font-medium text-nn-link hover:underline" rel="noopener noreferrer">Chat in WhatsApp</a>
+      <a href="#" class="hover:text-nn-pink-soft">Privacy Policy</a>
+    </div>
+    <p class="mt-8 text-center text-xs text-nn-body">© <span id="year"></span> · WonderBees Services</p>
+  </div>
+</footer>
+<div class="fixed bottom-0 left-0 right-0 z-40 border-t border-nn-wash bg-nn-surface/95 py-3 shadow-[0_-8px_24px_rgba(37,43,44,0.08)] backdrop-blur" role="complementary" aria-label="Quick contact">
+  <div class="mx-auto flex max-w-nn flex-col items-center justify-center gap-2 px-4 sm:flex-row sm:gap-12">
+    <a href="tel:+917025882913" class="text-sm font-semibold text-nn-secondary hover:text-nn-link">Call +91 702 588 2913</a>
+    <a href="https://wa.me/917025882913" class="text-sm font-semibold text-nn-link hover:underline" rel="noopener noreferrer">Chat in WhatsApp</a>
+  </div>
+</div>
+<div id="cookie-banner" class="fixed bottom-16 left-0 right-0 z-50 hidden px-4 sm:bottom-20 sm:px-6">
+  <div class="mx-auto flex max-w-4xl flex-col items-start gap-4 rounded-nn-lg border border-nn-wash bg-nn-surface p-4 shadow-xl sm:flex-row sm:items-center sm:justify-between">
+    <p class="text-xs leading-relaxed text-nn-body sm:text-sm">We use cookies to ensure you get the best experience on our website.</p>
+    <div class="flex w-full flex-wrap gap-3 sm:w-auto">
+      <a href="#" class="rounded-md px-3 py-2 text-xs font-semibold text-nn-secondary underline hover:text-nn-link">Privacy Policy</a>
+      <button type="button" id="cookie-accept" class="rounded-full bg-nn-cta px-5 py-2 text-xs font-bold uppercase tracking-wide text-white">That's OK</button>
+    </div>
+  </div>
+</div>
+
+    <a href="https://wa.me/917025882913" class="nn-float-whatsapp" target="_blank" rel="noopener noreferrer" aria-label="Chat on WhatsApp">
+      <span class="nn-float-whatsapp__glow" aria-hidden="true"></span>
+      <span class="nn-float-whatsapp__btn" aria-hidden="true">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="28" height="28" fill="currentColor" aria-hidden="true">
+          <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.435 9.884-9.881 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z" />
+        </svg>
+      </span>
+    </a>
+
+    <script type="module" src="../js/bootstrap.js"></script>
+    <script src="../js/main.js" defer></script>
+  </body>
+</html>

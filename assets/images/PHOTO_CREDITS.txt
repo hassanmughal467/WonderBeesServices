@@ -1,0 +1,15 @@
+Stock photography in this folder is from Pexels (https://www.pexels.com/license/).
+Free for commercial use; attribution is appreciated but not required by Pexels.
+
+Files and source pages (for your records):
+  hero-portrait.jpg  — pexels.com/photo/1648373
+  hero-side.jpg      — pexels.com/photo/3662800
+  section-family.jpg — pexels.com/photo/3661350
+  home-why.jpg       — pexels.com/photo/3663038
+  card-nannies.jpg   — pexels.com/photo/4239037
+  card-household.jpg — pexels.com/photo/4239145
+  card-process.jpg   — pexels.com/photo/7681091
+  testimonials-bg.jpg — pexels.com/photo/4473494
+  hero-home.jpg      — pexels.com/photo/3662840
+
+Replace any image by dropping a new file with the same filename, or update paths in index.html.

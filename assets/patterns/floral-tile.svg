@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="240" height="120" viewBox="0 0 240 120">
+  <title>Umbel floral tile</title>
+  <g fill="none" stroke="#6A5EA9" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" opacity="0.22">
+    <g transform="translate(60 95)">
+      <path d="M0 0 L-8 -52 M0 0 L10 -48"/>
+      <path d="M-8 -52 L-22 -72 M-8 -52 L-12 -70 M-8 -52 L-4 -71 M-8 -52 L4 -68 M-8 -52 L12 -65"/>
+      <path d="M10 -48 L24 -68 M10 -48 L14 -66 M10 -48 L6 -67 M10 -48 L18 -63"/>
+      <circle cx="-22" cy="-72" r="2.2" fill="#6A5EA9" stroke="none"/>
+      <circle cx="-12" cy="-70" r="2.2" fill="#6A5EA9" stroke="none"/>
+      <circle cx="-4" cy="-71" r="2.2" fill="#6A5EA9" stroke="none"/>
+      <circle cx="4" cy="-68" r="2.2" fill="#6A5EA9" stroke="none"/>
+      <circle cx="12" cy="-65" r="2.2" fill="#6A5EA9" stroke="none"/>
+      <circle cx="24" cy="-68" r="2.2" fill="#6A5EA9" stroke="none"/>
+      <circle cx="14" cy="-66" r="2.2" fill="#6A5EA9" stroke="none"/>
+      <circle cx="6" cy="-67" r="2.2" fill="#6A5EA9" stroke="none"/>
+      <circle cx="18" cy="-63" r="2.2" fill="#6A5EA9" stroke="none"/>
+    </g>
+    <g transform="translate(120 95) scale(-1 1)">
+      <path d="M0 0 L-8 -52 M0 0 L10 -48"/>
+      <path d="M-8 -52 L-22 -72 M-8 -52 L-12 -70 M-8 -52 L-4 -71 M-8 -52 L4 -68 M-8 -52 L12 -65"/>
+      <path d="M10 -48 L24 -68 M10 -48 L14 -66 M10 -48 L6 -67 M10 -48 L18 -63"/>
+      <circle cx="-22" cy="-72" r="2.2" fill="#6A5EA9" stroke="none"/>
+      <circle cx="-12" cy="-70" r="2.2" fill="#6A5EA9" stroke="none"/>
+      <circle cx="-4" cy="-71" r="2.2" fill="#6A5EA9" stroke="none"/>
+      <circle cx="4" cy="-68" r="2.2" fill="#6A5EA9" stroke="none"/>
+      <circle cx="12" cy="-65" r="2.2" fill="#6A5EA9" stroke="none"/>
+      <circle cx="24" cy="-68" r="2.2" fill="#6A5EA9" stroke="none"/>
+      <circle cx="14" cy="-66" r="2.2" fill="#6A5EA9" stroke="none"/>
+      <circle cx="6" cy="-67" r="2.2" fill="#6A5EA9" stroke="none"/>
+      <circle cx="18" cy="-63" r="2.2" fill="#6A5EA9" stroke="none"/>
+    </g>
+    <g transform="translate(180 95)">
+      <path d="M0 0 L-8 -52 M0 0 L10 -48"/>
+      <path d="M-8 -52 L-22 -72 M-8 -52 L-12 -70 M-8 -52 L-4 -71 M-8 -52 L4 -68 M-8 -52 L12 -65"/>
+      <path d="M10 -48 L24 -68 M10 -48 L14 -66 M10 -48 L6 -67 M10 -48 L18 -63"/>
+      <circle cx="-22" cy="-72" r="2.2" fill="#6A5EA9" stroke="none"/>
+      <circle cx="-12" cy="-70" r="2.2" fill="#6A5EA9" stroke="none"/>
+      <circle cx="-4" cy="-71" r="2.2" fill="#6A5EA9" stroke="none"/>
+      <circle cx="4" cy="-68" r="2.2" fill="#6A5EA9" stroke="none"/>
+      <circle cx="12" cy="-65" r="2.2" fill="#6A5EA9" stroke="none"/>
+      <circle cx="24" cy="-68" r="2.2" fill="#6A5EA9" stroke="none"/>
+      <circle cx="14" cy="-66" r="2.2" fill="#6A5EA9" stroke="none"/>
+      <circle cx="6" cy="-67" r="2.2" fill="#6A5EA9" stroke="none"/>
+      <circle cx="18" cy="-63" r="2.2" fill="#6A5EA9" stroke="none"/>
+    </g>
+  </g>
+</svg>
