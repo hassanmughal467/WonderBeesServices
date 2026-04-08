@@ -95,9 +95,9 @@ body {
   inset: 0;
   z-index: 0;
   background-color: #191b41;
-  background-image: url("https://images.unsplash.com/photo-1587654780291-39c9404d746b?auto=format&fit=crop&w=2400&q=82");
+  background-image: url("../assets/images/Children engaged at Wonder Bees Services_Banner.png");
   background-size: cover;
-  background-position: 50% 40%;
+  background-position: 50% 20%;
   transform: scale(1.02);
 }
 
